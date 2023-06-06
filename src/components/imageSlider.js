@@ -8,7 +8,9 @@ const ImageSlider = ({ url}) => {
         { steps.map((step)=>{
             index++
                 return (
+                    <div key={`${step}`}>
                     <MainImage url={step} inverted={true} inslider={true} index={index}/>
+                    </div>
                 )
         
         })}
