@@ -1,4 +1,5 @@
 import ImageBlock from "@/components/imageBlock"
+import ImageSlider from "@/components/imageSlider"
 export default function Home() {
   return (
     <div className="flex flex-col  w-screen items-center h-full ">
@@ -12,15 +13,18 @@ export default function Home() {
                   </h1>
               </div>
             </div>
-            <div className="w-full h-[30px] lg:h-[50px] z-20 -mt-6 md:-mt-12 bg-[#E7F5F4]"></div>
+            <div className="w-full h-[50px] z-20  md:-mt-12 bg-[#E7F5F4]"></div>
       </div>
-      <div className="w-full h-fit  max-w-[1360px]">
+      <div className="w-full h-fit flex flex-col max-w-[1360px]">
         <div className="md:mt-24 md:mb-24 mt-12 mb-24 w-full">
           <ImageBlock  url={'/01.png'} imageLeft={true}/>
         </div>
         <div className="md:mt-24 md:mb-24 mt-12 mb-12">
-          <ImageBlock  url={'/01.png'} imageLeft={false}/>
+          <ImageBlock  url={'/02.png'} imageLeft={false}/>
         </div>
+        {/* <div className="md:mt-24 flex justify-center md:mb-24 mt-12 mb-12">
+          <ImageSlider/>
+        </div> */}
       </div>
     </div>
 
