@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <div className="flex flex-col  w-screen items-center h-full ">
       <div className="w-full flex flex-col">
-            <div className="w-full h-[250px]  md:h-[350px] lg:h-[600px] flex justify-center items-center bg-top bg-[url('/truck.png')] bg-cover">
+            <div className="w-full h-[300px]  md:h-[350px] lg:h-[600px] flex justify-center items-center bg-top bg-[url('/truck.png')] bg-cover">
               <div class="w-full h-full relative z-10 flex  justify-center items-center backdrop-brightness-[25%]">
                   <h1 className="uppercase justify-center text-center text-white relative text-[35px] md:text-[60px] lg:text-[100px]  p-12 flex flex-row  font-primary ">
                     <img src="/leaf.png" className=" md:w-[100px] w-[75px]  md:h-[100px] h-[75px] lg:w-[150px] lg:h-[150px] absolute  bottom-10 lg:bottom-12 right-0 lg:right-6"/>

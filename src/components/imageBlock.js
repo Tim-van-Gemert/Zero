@@ -5,20 +5,29 @@ const ImageBlock = ({ url, imageLeft }) => {
 
   return (
     <div className="grid h-full w-full grid-cols-1  md:px-24 lg:grid-cols-2 gap-12 lg:gap-12 px-5 items-center">
-      {!imageLeft && (
-        <div className={`flex flex-col gap-2 ${imageAlignmentClass}`}>
-          <p className="text-2xl md:text-4xl">Lorem Ipsum</p>
-          <p className="text-md md:text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-          <p className="text-md md:text-2xl font-thin">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-        </div>
-      )}
-      <MainImage url={url} inverted={imageLeft} />
       {imageLeft && (
+        <>
+            <MainImage url={url} inverted={imageLeft} />
+            <div className={`flex flex-col gap-4 ${imageAlignmentClass}`}>
+            <p className="text-2xl md:text-4xl">Lorem Ipsum</p>
+            <p className="text-md md:text-2xl">Our mission is to provide delicious food while minimizing waste and promoting sustainability.</p>
+            <p className="text-md md:text-2xl font-thin">We believe in making a positive impact on the environment by adopting eco-friendly practices and offering zero waste options.</p>
+            </div>
+        </>
+
+      )}
+      
+      {!imageLeft && (
+        <>
         <div className={`flex flex-col gap-2 ${imageAlignmentClass}`}>
           <p className="text-2xl md:text-4xl">Lorem Ipsum</p>
           <p className="text-md md:text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
           <p className="text-md md:text-2xl font-thin">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
         </div>
+        <MainImage url={url} inverted={imageLeft} />
+
+        </>
+
       )}
     </div>
   );
