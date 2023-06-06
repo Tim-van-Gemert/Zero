@@ -1,32 +1,71 @@
-import ImageBlock from "@/components/imageBlock"
-import ImageSlider from "@/components/imageSlider"
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import ImageBlock from "@/components/imageBlock";
+import ImageSlider from "@/components/imageSlider";
+
 export default function Home() {
+  const [titleRef, titleInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const [block1Ref, block1InView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const [block2Ref, block2InView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   return (
-    <div className="flex flex-col  w-screen items-center h-full ">
+    <div className="flex flex-col w-screen items-center h-full">
       <div className="w-full flex flex-col">
-            <div className="w-full h-[300px]  md:h-[350px] lg:h-[600px] flex justify-center items-center bg-top bg-[url('/truck.png')] bg-cover">
-              <div class="w-full h-full relative z-10 flex  justify-center items-center backdrop-brightness-[25%]">
-                  <h1 className="uppercase justify-center text-center text-white relative text-[35px] md:text-[60px] lg:text-[100px]  p-12 flex flex-row  font-primary ">
-                    <img src="/leaf.png" className=" md:w-[100px] w-[75px]  md:h-[100px] h-[75px] lg:w-[150px] lg:h-[150px] absolute  bottom-10 lg:bottom-12 right-0 lg:right-6"/>
-                    <img src="/leafleft.png" className="  md:w-[100px] w-[75px]  md:h-[100px] h-[75px] lg:w-[150px] lg:h-[150px] absolute  bottom-10 lg: bottom-12 left-0 lg:left-6 "/>
-                      The zero waste <br/> foodtruck
-                  </h1>
-              </div>
-            </div>
-            <div className="w-full h-[50px] z-20  md:-mt-12 bg-[#E7F5F4]"></div>
+        <div
+          ref={titleRef}
+          className="w-full h-[300px] md:h-[350px] lg:h-[600px] flex justify-center relative items-center bg-top bg-[url('/truck.png')] bg-cover"
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={titleInView ? { opacity: 1, y: 0 } : {}}
+            className="uppercase justify-center z-20 text-center text-white relative text-[35px] md:text-[60px] lg:text-[100px] p-12 flex flex-row font-primary"
+          >
+            <img
+              src="/leaf.png"
+              className="md:w-[100px] w-[75px] md:h-[100px] h-[75px] lg:w-[150px] lg:h-[150px] absolute bottom-10 lg:bottom-12 right-0 lg:right-6"
+            />
+            <img
+              src="/leafleft.png"
+              className="md:w-[100px] w-[75px] md:h-[100px] h-[75px] lg:w-[150px] lg:h-[150px] absolute bottom-10 lg:bottom-12 left-0 lg:left-6"
+            />
+            The zero waste <br /> foodtruck
+          </motion.h1>
+          <div className="w-full h-full absolute z-10 flex justify-center items-center backdrop-brightness-[25%]"></div>
+        </div>
+        <div className="w-full h-[50px] z-20 md:-mt-12 bg-[#E7F5F4]"></div>
       </div>
       <div className="w-full h-fit flex flex-col max-w-[1360px]">
-        <div className="md:mt-24 md:mb-24 mt-12 mb-24 w-full">
-          <ImageBlock  url={'/01.png'} imageLeft={true}/>
-        </div>
-        <div className="md:mt-24 md:mb-24 mt-12 mb-12">
-          <ImageBlock  url={'/02.png'} imageLeft={false}/>
-        </div>
+        <motion.div
+          ref={block1Ref}
+          initial={{ opacity: 0, x: -20 }}
+          animate={block1InView ? { opacity: 1, x: 0 } : {}}
+          className="md:mt-24 md:mb-24 mt-12 mb-24 w-full"
+        >
+          <ImageBlock url={"/01.png"} imageLeft={true} />
+        </motion.div>
+        <motion.div
+          ref={block2Ref}
+          initial={{ opacity: 0, x: 20 }}
+          animate={block2InView ? { opacity: 1, x: 0 } : {}}
+          className="md:mt-24 md:mb-24 mt-12 mb-12"
+        >
+          <ImageBlock url={"/02.png"} imageLeft={false} />
+        </motion.div>
         {/* <div className="md:mt-24 flex justify-center md:mb-24 mt-12 mb-12">
           <ImageSlider/>
         </div> */}
       </div>
     </div>
-
-  )
+  );
 }
