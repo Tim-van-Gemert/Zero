@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'text-me';
+  src: url('../fonts/TextMeOne-Regular.ttf');
+  }
