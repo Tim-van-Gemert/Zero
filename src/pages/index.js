@@ -47,7 +47,7 @@ export default function Home() {
               src="/leafleft.png"
               className="md:w-[100px] w-[75px] md:h-[100px] h-[75px] lg:w-[150px] lg:h-[150px] absolute bottom-10 lg:bottom-12 left-0 lg:left-6"
             />
-            The zero waste <br /> foodtruck
+           The zero waste <br/> foodtruck 
           </motion.h1>
           <div className="w-full h-full absolute z-10 flex justify-center items-center backdrop-brightness-[30%]"></div>
         </div>
