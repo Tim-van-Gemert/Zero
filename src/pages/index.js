@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ImageBlock from "@/components/imageBlock";
 import ImageSlider from "@/components/imageSlider";
+import Header from "@/components/header";
 
 export default function Home() {
   const [titleRef, titleInView] = useInView({
@@ -24,13 +25,14 @@ export default function Home() {
     threshold: 0.2,
   });
 
+
   return (
     <div className="flex flex-col  items-center h-full">
       
       <div className="w-full flex flex-col">
         <div
           ref={titleRef}
-          className="w-full h-[300px] md:h-[350px] lg:h-[500px] flex justify-center   relative items-center bg-top bg-[url('/truck.png')] bg-cover"
+          className="w-full h-[300px] md:h-[350px] lg:h-[550px] flex justify-center   relative items-center bg-top bg-[url('/truck.png')] bg-cover"
         >
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
