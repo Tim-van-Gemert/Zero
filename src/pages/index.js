@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col  items-center h-full">
-      
+
       <div className="w-full flex flex-col">
         <div
           ref={titleRef}
@@ -47,11 +47,11 @@ export default function Home() {
               src="/leafleft.png"
               className="md:w-[100px] w-[75px] md:h-[100px] h-[75px] lg:w-[150px] lg:h-[150px] absolute bottom-10 lg:bottom-12 left-0 lg:left-6"
             />
-           The zero waste <br/> foodtruck 
+            The zero waste <br /> foodtruck
           </motion.h1>
           <div className="w-full h-full absolute z-10 flex justify-center items-center backdrop-brightness-[30%]"></div>
         </div>
-      <div className="w-full h-[50px] -mt-12  relative z-20  bg-[#E7F5F4]"></div>
+        <div className="w-full h-[50px] -mt-12  relative z-20  bg-[#E7F5F4]"></div>
 
       </div>
       <div className="w-full h-fit flex flex-col max-w-[1200px]">
@@ -63,12 +63,12 @@ export default function Home() {
         >
           <ImageBlock url={"/01.png"} imageLeft={true} />
         </motion.div>
-        <motion.div 
-        ref={block3Ref}
-        initial={{ opacity: 0, y: 20 }}
-        animate={block3InView ? { opacity: 1, y: 0 } : {}}
-        className="my-20">
-          <ImageSlider/>
+        <motion.div
+          ref={block3Ref}
+          initial={{ opacity: 0, y: 20 }}
+          animate={block3InView ? { opacity: 1, y: 0 } : {}}
+          className="my-20">
+          <ImageSlider />
         </motion.div>
         <motion.div
           ref={block2Ref}
