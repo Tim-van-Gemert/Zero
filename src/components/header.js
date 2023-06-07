@@ -22,19 +22,17 @@ const Header = () => {
         },
     ]
 
-    console.log(page.asPath)
     return (
         
-    <div className="  z-30 w-full  hidden md:flex justify-center absolute items-center  ">
+    <div className={`  z-30 w-full  hidden md:flex justify-center ${ page.asPath == '/' ? 'absolute' : 'relative mb-8 mt-8 '} items-center  `}>
 
-        <div className="flex flex-row  justify-center items-center text-white text-[28px] font-primary  p-3 gap-12 ">
+        <div className={`flex flex-row w-[1200px] ${ page.asPath == '/' ? 'text-white' :  'text-black'} py-4 justify-center items-center  text-[28px] font-primary  p-3 gap-12 `}>
             {
                 menuItems.map((i)=>{
-                    console.log(i.href)
                     return (
                     <div className="flex flex-col group w-fit">
                         <Link href={i.href}>{i.name}</Link>
-                        <div className={`${ page.asPath === i.href ? 'w-full' : 'w-0' } group-hover:w-full transition-all h-px bg-[#62B662]`}></div>
+                        <div className={`${ page.asPath === i.href ? 'w-full' : 'w-0' } group-hover:w-full transition-all h-[2px] bg-[#62B662]`}></div>
                     </div>
                     )
                 })

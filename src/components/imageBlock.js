@@ -4,7 +4,7 @@ const ImageBlock = ({ url, imageLeft }) => {
   const imageAlignmentClass = imageLeft ? "order-none" : "order-1 lg:order-none";
 
   return (
-    <div className="grid h-full w-full grid-cols-1  md:px-24 lg:grid-cols-2 gap-12 lg:gap-12 px-5 items-center">
+    <div className="grid h-full w-full grid-cols-1  lg:grid-cols-2 gap-12 lg:gap-12  items-center">
       {imageLeft && (
         <>
             <MainImage url={url} inverted={imageLeft} />
