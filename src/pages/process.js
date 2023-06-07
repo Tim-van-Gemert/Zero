@@ -32,7 +32,7 @@ export default function Process() {
       <div className="w-full flex  justify-center items-center flex-col">
         <div
           ref={titleRef}
-          className="w-[1200px] h-[300px] md:h-[350px] lg:h-[300px] flex justify-center   relative items-center bg-top bg-[url('/truck.png')] bg-cover"
+          className="w-[1200px] h-[300px] md:h-[350px] lg:h-[300px] flex justify-center   relative items-center bg-center bg-[url('/staff-working.jpg')] bg-cover"
         >
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
