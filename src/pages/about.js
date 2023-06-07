@@ -48,13 +48,13 @@ export default function About() {
 
       </div>
       <div className="w-full h-fit flex flex-col max-w-[1200px] px-10 lg:px-0">
-        <motion.div ref={block1Ref} initial={{ opacity: 0, x: -20 }} animate={block1InView ? { opacity: 1, x: 0 } : {}} className="my-20 w-full">
+        <motion.div ref={block1Ref} initial={{ opacity: 0, x: -20 }} animate={block1InView ? { opacity: 1, x: 0 } : {}} className="mt-24 w-full">
           <ImageBlock url={"/01.png"} imageLeft={true} />
         </motion.div>
-        <motion.div ref={block3Ref} initial={{ opacity: 0, y: 20 }} animate={block3InView ? { opacity: 1, y: 0 } : {}} className="my-20">
+        <motion.div ref={block3Ref} initial={{ opacity: 0, y: 20 }} animate={block3InView ? { opacity: 1, y: 0 } : {}} className="mt-24">
           <TextBlock url={"/01.png"} imageLeft={true} />
         </motion.div>
-        <motion.div ref={block2Ref} initial={{ opacity: 0, x: 20 }} animate={block2InView ? { opacity: 1, x: 0 } : {}} className="my-20">
+        <motion.div ref={block2Ref} initial={{ opacity: 0, x: 20 }} animate={block2InView ? { opacity: 1, x: 0 } : {}} className="mt-24 mb-24">
           <ImageBlock url={"/02.png"} imageLeft={false} />
         </motion.div>
 
