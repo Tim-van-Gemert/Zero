@@ -19,12 +19,17 @@ export default function Home() {
     threshold: 0.2,
   });
 
+  const [block3Ref, block3InView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   return (
-    <div className="flex flex-col w-screen items-center h-full">
+    <div className="flex flex-col  items-center h-full">
       <div className="w-full flex flex-col">
         <div
           ref={titleRef}
-          className="w-full h-[300px] md:h-[350px] lg:h-[600px] flex justify-center relative items-center bg-top bg-[url('/truck.png')] bg-cover"
+          className="w-full h-[300px] md:h-[350px] lg:h-[500px] flex justify-center relative items-center bg-top bg-[url('/truck.png')] bg-cover"
         >
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -41,7 +46,7 @@ export default function Home() {
             />
             The zero waste <br /> foodtruck
           </motion.h1>
-          <div className="w-full h-full absolute z-10 flex justify-center items-center backdrop-brightness-[25%]"></div>
+          <div className="w-full h-full absolute z-10 flex justify-center items-center backdrop-brightness-[30%]"></div>
         </div>
         <div className="w-full h-[50px] z-20 md:-mt-12 bg-[#E7F5F4]"></div>
       </div>
@@ -50,7 +55,7 @@ export default function Home() {
           ref={block1Ref}
           initial={{ opacity: 0, x: -20 }}
           animate={block1InView ? { opacity: 1, x: 0 } : {}}
-          className="md:mt-24 md:mb-24 mt-12 mb-24 w-full"
+          className="my-24 w-full"
         >
           <ImageBlock url={"/01.png"} imageLeft={true} />
         </motion.div>
@@ -58,13 +63,17 @@ export default function Home() {
           ref={block2Ref}
           initial={{ opacity: 0, x: 20 }}
           animate={block2InView ? { opacity: 1, x: 0 } : {}}
-          className="md:mt-24 md:mb-24 mt-12 mb-12"
+          className="my-24"
         >
           <ImageBlock url={"/02.png"} imageLeft={false} />
         </motion.div>
-        {/* <div className="md:mt-24 flex justify-center md:mb-24 mt-12 mb-12">
+        <motion.div 
+        ref={block3Ref}
+        initial={{ opacity: 0, y: 20 }}
+        animate={block3InView ? { opacity: 1, y: 0 } : {}}
+        className="my-24">
           <ImageSlider/>
-        </div> */}
+        </motion.div>
       </div>
     </div>
   );
