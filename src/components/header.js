@@ -30,7 +30,7 @@ const Header = () => {
             {
                 menuItems.map((i)=>{
                     return (
-                    <div className="flex flex-col group w-fit">
+                    <div key={i.name} className="flex flex-col group w-fit">
                         <Link href={i.href}>{i.name}</Link>
                         <div className={`${ page.asPath === i.href ? 'w-full' : 'w-0' } group-hover:w-full transition-all h-[2px] bg-[#62B662]`}></div>
                     </div>
