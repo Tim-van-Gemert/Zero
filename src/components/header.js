@@ -4,10 +4,7 @@ import { useRouter } from 'next/router'
 const Header = () => {
     const page = useRouter()
     const menuItems = [
-        {
-            name: 'Home',
-            href: '/',
-        },
+
         {
             name: 'About us',
             href: '/about',
@@ -29,9 +26,10 @@ const Header = () => {
             <div className={`grid grid-cols-3 w-[1200px] ${page.asPath == '/' ? 'text-white' : 'text-black'}  text-[20px] font-secondary justify-start items-center  `}>
 
                 <div className="flex flex-row gap-12 col-span-2  justify-start items-center">
-                    <div className="flex justify-start">
+                    <Link href={'/'} className="flex flex-col group justify-start -mt-[4px]">
                         <img src={`${page.asPath == '/' ? '/logo-white.svg ' : '/logo.svg '}`} className=""></img>
-                    </div>
+                        <div className={`${page.asPath == '/' ? 'w-[80%]' : 'w-0'} ml-6  group-hover:w-[80%] -mt-2 transition-all h-[2px] bg-[#62B662]`}></div>
+                    </Link>
                     {
                         menuItems.map((i) => {
                             return (
