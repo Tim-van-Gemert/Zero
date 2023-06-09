@@ -48,7 +48,7 @@ export default function About() {
                     <ImageBlock url={"/01.png"} imageLeft={true}
                         title={'Lorem Ipsum'}
                         subtitle={'Explore our menu of thoughtfully crafted dishes, each prepared with a focus on sustainability and flavor. '}
-                        paragraph={'At Zero Waste Truck, we believe that food can be both delicious and environmentally friendly.'} />
+                        paragraph={'At [COMPANY NAME], we believe that food can be both delicious and environmentally friendly.'} />
                 </motion.div>
                 <motion.div ref={block3Ref} initial={{ opacity: 0, y: 20 }} animate={block3InView ? { opacity: 1, y: 0 } : {}} className="mt-24">
                     <ImageBlock url={"/02.png"} imageLeft={false}

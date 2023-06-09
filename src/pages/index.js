@@ -48,7 +48,7 @@ export default function Home() {
         <motion.div ref={block1Ref} initial={{ opacity: 0, x: -20 }} animate={block1InView ? { opacity: 1, x: 0 } : {}} className="my-20 w-full">
           <ImageBlock url={"/01.png"} imageLeft={true}
             title={'Lorem Ipsum'}
-            subtitle={'At Zero Waste Truck, we believe that delicious food and environmental responsibility can go hand in hand.'}
+            subtitle={'At [COMPANY NAME], we believe that delicious food and environmental responsibility can go hand in hand.'}
             paragraph={'Our mobile food truck offers a mouthwatering menu of delectable dishes, all prepared with a commitment to zero waste principles.'} />
         </motion.div>
         <motion.div ref={block3Ref} initial={{ opacity: 0, y: 20 }} animate={block3InView ? { opacity: 1, y: 0 } : {}} className="my-20">

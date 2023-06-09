@@ -52,7 +52,7 @@ export default function About() {
                 <motion.div ref={block1Ref} initial={{ opacity: 0, x: -20 }} animate={block1InView ? { opacity: 1, x: 0 } : {}} className="mt-24 w-full">
                     <ImageBlock url={"/01.png"} imageLeft={true}
                         title={'Lorem Ipsum'}
-                        subtitle={'At Zero Waste Truck, we are passionate about minimizing our environmental footprint without compromising on taste. '}
+                        subtitle={'At [COMPANY NAME], we are passionate about minimizing our environmental footprint without compromising on taste. '}
                         paragraph={'Our mission is to provide a guilt-free dining experience where sustainability and flavor coexist.'} />
                 </motion.div>
                 <motion.div ref={block3Ref} initial={{ opacity: 0, y: 20 }} animate={block3InView ? { opacity: 1, y: 0 } : {}} className="mt-24">
