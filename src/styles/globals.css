@@ -6,3 +6,14 @@
   font-family: 'text-me';
   src: url('../fonts/TextMeOne-Regular.ttf');
   }
+
+@font-face {
+  font-family: 'pal';
+  src: url('../fonts/Palanquin-Regular.ttf');
+  }
+
+
+@font-face {
+  font-family: 'pal-light';
+  src: url('../fonts/Palanquin-ExtraLight.ttf');
+  }

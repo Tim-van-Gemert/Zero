@@ -14,6 +14,8 @@ module.exports = {
       },
       fontFamily: {
         primary: "text-me",
+        secondary: "pal",
+        secondarylight: "pal-light",
       },
     },
   },

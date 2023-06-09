@@ -26,7 +26,7 @@ const Header = () => {
         
     <div className={`  z-30 w-full hidden md:flex justify-center ${ page.asPath == '/' ? 'absolute mb-8 mt-8' : 'relative mb-8 mt-8 '} items-center  `}>
 
-        <div className={`flex flex-row w-[1200px] ${ page.asPath == '/' ? 'text-white' :  'text-black'} py-4 justify-center items-center  text-[28px] font-primary  p-3 gap-12 `}>
+        <div className={`flex flex-row w-[1200px] ${ page.asPath == '/' ? 'text-white' :  'text-black'} py-4 justify-center items-center  text-[28px] font-secondary  p-3 gap-12 `}>
             {
                 menuItems.map((i)=>{
                     return (
