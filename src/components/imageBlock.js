@@ -10,8 +10,8 @@ const ImageBlock = ({ url, imageLeft, title, subtitle, paragraph }) => {
             <MainImage url={url} inverted={imageLeft} />
             <div className={`flex flex-col gap-4 pr-7 ${imageAlignmentClass}`}>
             <p className="text-2xl md:text-4xl">{title}</p>
-            <p className="text-md md:text-2xl ">{subtitle}</p>
-            <p className="text-md md:text-2xl font-secondarylight font-thin">{paragraph}</p>
+            <p className="text-md text-[20px] ">{subtitle}</p>
+            <p className="text-md text-[20px] font-secondarylight font-thin">{paragraph}</p>
             </div>
         </>
 
@@ -21,8 +21,8 @@ const ImageBlock = ({ url, imageLeft, title, subtitle, paragraph }) => {
         <>
         <div className={`flex flex-col gap-4 pl-7 ${imageAlignmentClass}`}>
             <p className="text-2xl md:text-4xl">{title}</p>
-            <p className="text-md md:text-2xl">{subtitle}</p>
-            <p className="text-md md:text-2xl font-secondarylight font-thin">{paragraph}</p>
+            <p className="text-md text-[20px]">{subtitle}</p>
+            <p className="text-md text-[20px] font-secondarylight font-thin">{paragraph}</p>
         </div>
         <MainImage url={url} inverted={imageLeft} />
 
