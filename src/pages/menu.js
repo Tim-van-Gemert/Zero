@@ -47,20 +47,20 @@ export default function About() {
                 <motion.div ref={block1Ref} initial={{ opacity: 0, x: -20 }} animate={block1InView ? { opacity: 1, x: 0 } : {}} className="mt-24 w-full">
                     <ImageBlock url={"/01.png"} imageLeft={true}
                         title={'Lorem Ipsum'}
-                        subtitle={'Our mission is to provide delicious food while minimizing waste and promoting sustainability.'}
-                        paragraph={'We believe in making a positive impact on the environment by adopting eco-friendly practices and offering zero waste options.'} />
+                        subtitle={'Explore our menu of thoughtfully crafted dishes, each prepared with a focus on sustainability and flavor. '}
+                        paragraph={'At Zero Waste Truck, we believe that food can be both delicious and environmentally friendly.'} />
                 </motion.div>
                 <motion.div ref={block3Ref} initial={{ opacity: 0, y: 20 }} animate={block3InView ? { opacity: 1, y: 0 } : {}} className="mt-24">
                     <ImageBlock url={"/02.png"} imageLeft={false}
                         title={'Lorem Ipsum'}
-                        subtitle={'Our mission is to provide delicious food while minimizing waste and promoting sustainability.'}
-                        paragraph={'We believe in making a positive impact on the environment by adopting eco-friendly practices and offering zero waste options.'} />
+                        subtitle={'From hearty mains to mouthwatering desserts, our menu offers something for every palate. '}
+                        paragraph={'We source organic, seasonal ingredients and transform them into culinary delights that leave a lasting impression.'} />
                 </motion.div>
                 <motion.div ref={block2Ref} initial={{ opacity: 0, x: 20 }} animate={block2InView ? { opacity: 1, x: 0 } : {}} className="mt-24 mb-24">
                     <TextBlock url={"/01.png"} imageLeft={true}
                         title={'Lorem Ipsum'}
-                        subtitle={'Our mission is to provide delicious food while minimizing waste and promoting sustainability.'}
-                        paragraph={'We believe in making a positive impact on the environment by adopting eco-friendly practices and offering zero waste options.'} />
+                        subtitle={'Sample the taste of sustainability with our signature dishes, all created with a zero waste approach.'}
+                        paragraph={'Indulge in guilt-free dining and join us in our mission to make the world a greener place, one bite at a time.'} />
                 </motion.div>
 
             </div>

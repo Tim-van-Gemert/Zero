@@ -48,8 +48,8 @@ export default function Home() {
         <motion.div ref={block1Ref} initial={{ opacity: 0, x: -20 }} animate={block1InView ? { opacity: 1, x: 0 } : {}} className="my-20 w-full">
           <ImageBlock url={"/01.png"} imageLeft={true}
             title={'Lorem Ipsum'}
-            subtitle={'Our mission is to provide delicious food while minimizing waste and promoting sustainability.'}
-            paragraph={'We believe in making a positive impact on the environment by adopting eco-friendly practices and offering zero waste options.'} />
+            subtitle={'At Zero Waste Truck, we believe that delicious food and environmental responsibility can go hand in hand.'}
+            paragraph={'Our mobile food truck offers a mouthwatering menu of delectable dishes, all prepared with a commitment to zero waste principles.'} />
         </motion.div>
         <motion.div ref={block3Ref} initial={{ opacity: 0, y: 20 }} animate={block3InView ? { opacity: 1, y: 0 } : {}} className="my-20">
           <ImageSlider />
@@ -57,8 +57,8 @@ export default function Home() {
         <motion.div ref={block2Ref} initial={{ opacity: 0, x: 20 }} animate={block2InView ? { opacity: 1, x: 0 } : {}} className="my-20">
           <ImageBlock url={"/02.png"} imageLeft={false}
             title={'Lorem Ipsum'}
-            subtitle={'Our mission is to provide delicious food while minimizing waste and promoting sustainability.'}
-            paragraph={'We believe in making a positive impact on the environment by adopting eco-friendly practices and offering zero waste options.'} />
+            subtitle={'Join us on a culinary journey where every bite makes a positive impact on the planet.'}
+            paragraph={" Indulge in our flavorful creations while knowing that you're supporting a greener future. Visit us today and taste the difference!"} />
         </motion.div>
       </div>
     </div>
