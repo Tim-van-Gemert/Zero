@@ -41,8 +41,11 @@ const Header = () => {
                         })
                     }
                 </div>
-                <div className="flex justify-end relative self-end">
-                    <button className="  p-2">Contact</button>
+                <div className="flex justify-end ">
+                    <div className="group flex flex-col w-fit p-2 ">
+                        <button className="">Contact</button>
+                        <div className="w-0 group-hover:w-full transition-all h-[2px] bg-[#62B662]"></div>
+                    </div> 
                 </div>
             </div>
         </div>
